@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PhanXuongModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tNuocSX">
+    <Key>
+      <PropertyRef Name="manuoc" />
+    </Key>
+    <Property Name="manuoc" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tennuoc" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tPhuKiens" Relationship="Self.FK__tPhuKien__ghichu__2A4B4B5E" FromRole="tNuocSX" ToRole="tPhuKien" />
+  </EntityType>
+  <EntityType Name="tPhanCong">
+    <Key>
+      <PropertyRef Name="maphancong" />
+    </Key>
+    <Property Name="maphancong" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="matho" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="maxe" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="tTho" Relationship="Self.FK__tPhanCong__maxe__412EB0B6" FromRole="tPhanCong" ToRole="tTho" />
+    <NavigationProperty Name="tXe" Relationship="Self.FK__tPhanCong__maxe__4222D4EF" FromRole="tPhanCong" ToRole="tXe" />
+  </EntityType>
+  <EntityType Name="tPhuKien">
+    <Key>
+      <PropertyRef Name="mapk" />
+    </Key>
+    <Property Name="mapk" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tenpk" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="manuoc" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="dongia" Type="Double" />
+    <Property Name="soluongtontai" Type="Int32" />
+    <Property Name="ghichu" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tNuocSX" Relationship="Self.FK__tPhuKien__ghichu__2A4B4B5E" FromRole="tPhuKien" ToRole="tNuocSX" />
+    <NavigationProperty Name="tThanhPhans" Relationship="Self.FK__tThanhPhan__mapk__2F10007B" FromRole="tPhuKien" ToRole="tThanhPhan" />
+  </EntityType>
+  <EntityType Name="tThanhPhan">
+    <Key>
+      <PropertyRef Name="mathanhphan" />
+    </Key>
+    <Property Name="mathanhphan" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="maxe" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="mapk" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="donvitinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="soluong" Type="Int32" />
+    <NavigationProperty Name="tPhuKien" Relationship="Self.FK__tThanhPhan__mapk__2F10007B" FromRole="tThanhPhan" ToRole="tPhuKien" />
+    <NavigationProperty Name="tXe" Relationship="Self.FK__tThanhPha__soluo__2E1BDC42" FromRole="tThanhPhan" ToRole="tXe" />
+  </EntityType>
+  <EntityType Name="tTho">
+    <Key>
+      <PropertyRef Name="matho" />
+    </Key>
+    <Property Name="matho" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tentho" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="bactho" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tPhanCongs" Relationship="Self.FK__tPhanCong__maxe__412EB0B6" FromRole="tTho" ToRole="tPhanCong" />
+  </EntityType>
+  <EntityType Name="tXe">
+    <Key>
+      <PropertyRef Name="maxe" />
+    </Key>
+    <Property Name="maxe" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tenxe" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ghichu" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tPhanCongs" Relationship="Self.FK__tPhanCong__maxe__4222D4EF" FromRole="tXe" ToRole="tPhanCong" />
+    <NavigationProperty Name="tThanhPhans" Relationship="Self.FK__tThanhPha__soluo__2E1BDC42" FromRole="tXe" ToRole="tThanhPhan" />
+  </EntityType>
+  <Association Name="FK__tPhuKien__ghichu__2A4B4B5E">
+    <End Role="tNuocSX" Type="Self.tNuocSX" Multiplicity="0..1" />
+    <End Role="tPhuKien" Type="Self.tPhuKien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tNuocSX">
+        <PropertyRef Name="manuoc" />
+      </Principal>
+      <Dependent Role="tPhuKien">
+        <PropertyRef Name="manuoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tPhanCong__maxe__412EB0B6">
+    <End Role="tTho" Type="Self.tTho" Multiplicity="0..1" />
+    <End Role="tPhanCong" Type="Self.tPhanCong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tTho">
+        <PropertyRef Name="matho" />
+      </Principal>
+      <Dependent Role="tPhanCong">
+        <PropertyRef Name="matho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tPhanCong__maxe__4222D4EF">
+    <End Role="tXe" Type="Self.tXe" Multiplicity="0..1" />
+    <End Role="tPhanCong" Type="Self.tPhanCong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tXe">
+        <PropertyRef Name="maxe" />
+      </Principal>
+      <Dependent Role="tPhanCong">
+        <PropertyRef Name="maxe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tThanhPhan__mapk__2F10007B">
+    <End Role="tPhuKien" Type="Self.tPhuKien" Multiplicity="0..1" />
+    <End Role="tThanhPhan" Type="Self.tThanhPhan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tPhuKien">
+        <PropertyRef Name="mapk" />
+      </Principal>
+      <Dependent Role="tThanhPhan">
+        <PropertyRef Name="mapk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tThanhPha__soluo__2E1BDC42">
+    <End Role="tXe" Type="Self.tXe" Multiplicity="0..1" />
+    <End Role="tThanhPhan" Type="Self.tThanhPhan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tXe">
+        <PropertyRef Name="maxe" />
+      </Principal>
+      <Dependent Role="tThanhPhan">
+        <PropertyRef Name="maxe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PhanXuongEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="tNuocSXes" EntityType="Self.tNuocSX" />
+    <EntitySet Name="tPhanCongs" EntityType="Self.tPhanCong" />
+    <EntitySet Name="tPhuKiens" EntityType="Self.tPhuKien" />
+    <EntitySet Name="tThanhPhans" EntityType="Self.tThanhPhan" />
+    <EntitySet Name="tThoes" EntityType="Self.tTho" />
+    <EntitySet Name="tXes" EntityType="Self.tXe" />
+    <AssociationSet Name="FK__tPhuKien__ghichu__2A4B4B5E" Association="Self.FK__tPhuKien__ghichu__2A4B4B5E">
+      <End Role="tNuocSX" EntitySet="tNuocSXes" />
+      <End Role="tPhuKien" EntitySet="tPhuKiens" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tPhanCong__maxe__412EB0B6" Association="Self.FK__tPhanCong__maxe__412EB0B6">
+      <End Role="tTho" EntitySet="tThoes" />
+      <End Role="tPhanCong" EntitySet="tPhanCongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tPhanCong__maxe__4222D4EF" Association="Self.FK__tPhanCong__maxe__4222D4EF">
+      <End Role="tXe" EntitySet="tXes" />
+      <End Role="tPhanCong" EntitySet="tPhanCongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tThanhPhan__mapk__2F10007B" Association="Self.FK__tThanhPhan__mapk__2F10007B">
+      <End Role="tPhuKien" EntitySet="tPhuKiens" />
+      <End Role="tThanhPhan" EntitySet="tThanhPhans" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tThanhPha__soluo__2E1BDC42" Association="Self.FK__tThanhPha__soluo__2E1BDC42">
+      <End Role="tXe" EntitySet="tXes" />
+      <End Role="tThanhPhan" EntitySet="tThanhPhans" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(PhanXuongModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(PhanXuongModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

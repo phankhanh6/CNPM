@@ -1,0 +1,17 @@
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\obj\Debug\QuanLyPX.csproj.AssemblyReference.cache
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\obj\Debug\QuanLyPX.Menu.resources
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\obj\Debug\QuanLyPX.Properties.Resources.resources
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\obj\Debug\QuanLyPX.csproj.GenerateResource.cache
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\obj\Debug\QuanLyPX.csproj.CoreCompileInputs.cache
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\bin\Debug\QuanLyPX.exe.config
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\bin\Debug\QuanLyPX.exe
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\bin\Debug\QuanLyPX.pdb
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\bin\Debug\EntityFramework.dll
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\bin\Debug\EntityFramework.SqlServer.dll
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\bin\Debug\EntityFramework.xml
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\bin\Debug\EntityFramework.SqlServer.xml
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\obj\Debug\QuanLyPX.csproj.CopyComplete
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\obj\Debug\QuanLyPX.exe
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\obj\Debug\QuanLyPX.pdb
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\obj\Debug\QuanLyPX.DSXe.resources
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\obj\Debug\QuanLyPX.csproj.SuggestedBindingRedirects.cache
