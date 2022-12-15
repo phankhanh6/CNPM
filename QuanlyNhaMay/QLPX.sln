@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLPX", "C:\Users\Dell\source\repos\QLPX\QLPX\QLPX.csproj", "{092B8468-4AA3-4B62-ADC7-C396DCB042D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{092B8468-4AA3-4B62-ADC7-C396DCB042D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{092B8468-4AA3-4B62-ADC7-C396DCB042D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{092B8468-4AA3-4B62-ADC7-C396DCB042D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{092B8468-4AA3-4B62-ADC7-C396DCB042D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E0566B9-FE85-4D4F-B00B-E49FA6057B21}
+	EndGlobalSection
+EndGlobal

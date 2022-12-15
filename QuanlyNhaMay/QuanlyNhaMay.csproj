@@ -41,8 +41,20 @@
     <Reference Include="DevExpress.XtraBars.v20.1" />
     <Reference Include="DevExpress.Sparkline.v20.1.Core" />
     <Reference Include="DevExpress.XtraEditors.v20.1" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\QuanLyPX\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\QuanLyPX\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,10 +71,82 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaiKhoan.Designer.cs">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimkiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimkiem.Designer.cs">
+      <DependentUpon>frmTimkiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrangchu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrangchu.Designer.cs">
+      <DependentUpon>frmTrangchu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXe.Designer.cs">
+      <DependentUpon>frmXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanXuong.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhanXuong.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhanXuong.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhanXuong.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhanXuong.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhanXuong.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>PhanXuong.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tNuocSX.cs">
+      <DependentUpon>PhanXuong.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tPhanCong.cs">
+      <DependentUpon>PhanXuong.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tPhuKien.cs">
+      <DependentUpon>PhanXuong.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tThanhPhan.cs">
+      <DependentUpon>PhanXuong.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tTho.cs">
+      <DependentUpon>PhanXuong.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tXe.cs">
+      <DependentUpon>PhanXuong.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaiKhoan.resx">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimkiem.resx">
+      <DependentUpon>frmTimkiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrangchu.resx">
+      <DependentUpon>frmTrangchu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXe.resx">
+      <DependentUpon>frmXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -73,8 +157,18 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="PhanXuong.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PhanXuong.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PhanXuong.edmx.diagram">
+      <DependentUpon>PhanXuong.edmx</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\tXe.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -84,6 +178,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PhanXuong.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PhanXuong.edmx</DependentUpon>
+      <LastGenOutput>PhanXuong.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PhanXuong.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PhanXuong.edmx</DependentUpon>
+      <LastGenOutput>PhanXuong.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\bg_dangnhap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
