@@ -29,5 +29,6 @@ namespace QuanlyNhaMay
         public virtual ICollection<tPhanCong> tPhanCong { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tThanhPhan> tThanhPhan { get; set; }
+
     }
 }

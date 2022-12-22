@@ -32,7 +32,7 @@ namespace QuanlyNhaMay
             this.components = new System.ComponentModel.Container();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
-            this.btn_trangchu = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_gioithieu = new DevExpress.XtraBars.BarButtonItem();
             this.btn_Taikhoan = new DevExpress.XtraBars.BarButtonItem();
             this.btn_Xe = new DevExpress.XtraBars.BarButtonItem();
             this.btn_Tho = new DevExpress.XtraBars.BarButtonItem();
@@ -41,7 +41,7 @@ namespace QuanlyNhaMay
             this.btn_Phancong = new DevExpress.XtraBars.BarButtonItem();
             this.btn_Thanhphan = new DevExpress.XtraBars.BarButtonItem();
             this.btn_DSXe = new DevExpress.XtraBars.BarButtonItem();
-            this.btn_DSTho = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_hoadon = new DevExpress.XtraBars.BarButtonItem();
             this.btn_DSPhukien = new DevExpress.XtraBars.BarButtonItem();
             this.btn_LocXe = new DevExpress.XtraBars.BarButtonItem();
             this.btn_LocPhukien = new DevExpress.XtraBars.BarButtonItem();
@@ -55,10 +55,6 @@ namespace QuanlyNhaMay
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbon_InAn = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbon_Timkiem = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbon_Gioithieu = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbon_Help = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
@@ -73,7 +69,7 @@ namespace QuanlyNhaMay
             this.ribbonControl1.ExpandCollapseItem,
             this.ribbonControl1.SearchEditItem,
             this.barSubItem1,
-            this.btn_trangchu,
+            this.btn_gioithieu,
             this.btn_Taikhoan,
             this.btn_Xe,
             this.btn_Tho,
@@ -82,7 +78,7 @@ namespace QuanlyNhaMay
             this.btn_Phancong,
             this.btn_Thanhphan,
             this.btn_DSXe,
-            this.btn_DSTho,
+            this.btn_hoadon,
             this.btn_DSPhukien,
             this.btn_LocXe,
             this.btn_LocPhukien,
@@ -98,8 +94,6 @@ namespace QuanlyNhaMay
             this.ribbon_Hethong,
             this.ribbon_Danhmuc,
             this.ribbon_InAn,
-            this.ribbon_Timkiem,
-            this.ribbon_Gioithieu,
             this.ribbon_Help});
             this.ribbonControl1.Size = new System.Drawing.Size(1091, 193);
             // 
@@ -109,11 +103,12 @@ namespace QuanlyNhaMay
             this.barSubItem1.Id = 1;
             this.barSubItem1.Name = "barSubItem1";
             // 
-            // btn_trangchu
+            // btn_gioithieu
             // 
-            this.btn_trangchu.Caption = "Trang chủ";
-            this.btn_trangchu.Id = 2;
-            this.btn_trangchu.Name = "btn_trangchu";
+            this.btn_gioithieu.Caption = "Giới thiệu\r\n";
+            this.btn_gioithieu.Id = 2;
+            this.btn_gioithieu.Name = "btn_gioithieu";
+            this.btn_gioithieu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_trangchu_ItemClick);
             // 
             // btn_Taikhoan
             // 
@@ -134,48 +129,56 @@ namespace QuanlyNhaMay
             this.btn_Tho.Caption = "Thợ";
             this.btn_Tho.Id = 5;
             this.btn_Tho.Name = "btn_Tho";
+            this.btn_Tho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Tho_ItemClick);
             // 
             // btn_NuocSX
             // 
             this.btn_NuocSX.Caption = "Nước sản xuất";
             this.btn_NuocSX.Id = 6;
             this.btn_NuocSX.Name = "btn_NuocSX";
+            this.btn_NuocSX.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NuocSX_ItemClick);
             // 
             // btn_Phukien
             // 
             this.btn_Phukien.Caption = "Phụ kiện";
             this.btn_Phukien.Id = 7;
             this.btn_Phukien.Name = "btn_Phukien";
+            this.btn_Phukien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Phukien_ItemClick);
             // 
             // btn_Phancong
             // 
             this.btn_Phancong.Caption = "Phân công";
             this.btn_Phancong.Id = 8;
             this.btn_Phancong.Name = "btn_Phancong";
+            this.btn_Phancong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Phancong_ItemClick);
             // 
             // btn_Thanhphan
             // 
             this.btn_Thanhphan.Caption = "Thành phần";
             this.btn_Thanhphan.Id = 9;
             this.btn_Thanhphan.Name = "btn_Thanhphan";
+            this.btn_Thanhphan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Thanhphan_ItemClick);
             // 
             // btn_DSXe
             // 
             this.btn_DSXe.Caption = "Danh sách xe";
             this.btn_DSXe.Id = 10;
             this.btn_DSXe.Name = "btn_DSXe";
+            this.btn_DSXe.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_DSXe_ItemClick);
             // 
-            // btn_DSTho
+            // btn_hoadon
             // 
-            this.btn_DSTho.Caption = "Danh sách thợ";
-            this.btn_DSTho.Id = 11;
-            this.btn_DSTho.Name = "btn_DSTho";
+            this.btn_hoadon.Caption = "In hóa đơn";
+            this.btn_hoadon.Id = 11;
+            this.btn_hoadon.Name = "btn_hoadon";
+            this.btn_hoadon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_hoadon_ItemClick);
             // 
             // btn_DSPhukien
             // 
             this.btn_DSPhukien.Caption = "Danh sách phụ kiện";
             this.btn_DSPhukien.Id = 12;
             this.btn_DSPhukien.Name = "btn_DSPhukien";
+            this.btn_DSPhukien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_DSPhukien_ItemClick);
             // 
             // btn_LocXe
             // 
@@ -222,7 +225,7 @@ namespace QuanlyNhaMay
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.btn_trangchu);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btn_gioithieu);
             this.ribbonPageGroup1.ItemLinks.Add(this.btn_Taikhoan);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
@@ -253,34 +256,9 @@ namespace QuanlyNhaMay
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.btn_DSXe);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btn_DSTho);
             this.ribbonPageGroup3.ItemLinks.Add(this.btn_DSPhukien);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btn_hoadon);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            // 
-            // ribbon_Timkiem
-            // 
-            this.ribbon_Timkiem.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4});
-            this.ribbon_Timkiem.Name = "ribbon_Timkiem";
-            this.ribbon_Timkiem.Text = "Tìm kiếm";
-            // 
-            // ribbonPageGroup4
-            // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.btn_LocXe);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btn_LocPhukien);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btn_LocThanhphan);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            // 
-            // ribbon_Gioithieu
-            // 
-            this.ribbon_Gioithieu.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup6});
-            this.ribbon_Gioithieu.Name = "ribbon_Gioithieu";
-            this.ribbon_Gioithieu.Text = "Giới thiệu";
-            // 
-            // ribbonPageGroup6
-            // 
-            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             // 
             // ribbon_Help
             // 
@@ -303,8 +281,11 @@ namespace QuanlyNhaMay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImageStore = global::QuanlyNhaMay.Properties.Resources.Khanhminh;
             this.ClientSize = new System.Drawing.Size(1091, 553);
             this.Controls.Add(this.ribbonControl1);
+            this.IconOptions.Image = global::QuanlyNhaMay.Properties.Resources._1;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
@@ -326,7 +307,7 @@ namespace QuanlyNhaMay
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbon_Hethong;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
-        private DevExpress.XtraBars.BarButtonItem btn_trangchu;
+        private DevExpress.XtraBars.BarButtonItem btn_gioithieu;
         private DevExpress.XtraBars.BarButtonItem btn_Taikhoan;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbon_Danhmuc;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
@@ -338,10 +319,8 @@ namespace QuanlyNhaMay
         private DevExpress.XtraBars.BarButtonItem btn_Thanhphan;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbon_InAn;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbon_Timkiem;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem btn_DSXe;
-        private DevExpress.XtraBars.BarButtonItem btn_DSTho;
+        private DevExpress.XtraBars.BarButtonItem btn_hoadon;
         private DevExpress.XtraBars.BarButtonItem btn_DSPhukien;
         private DevExpress.XtraBars.BarButtonItem btn_LocXe;
         private DevExpress.XtraBars.BarButtonItem btn_LocPhukien;
@@ -349,8 +328,6 @@ namespace QuanlyNhaMay
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbon_Help;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.BarButtonItem btn_helpchucnang;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbon_Gioithieu;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem btn_Contact;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;

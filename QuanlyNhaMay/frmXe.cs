@@ -61,7 +61,7 @@ namespace QuanlyNhaMay
         public void Add()
         {
             var newXe = new tXe();
-            newXe.maxe = txt_maxe.Text.Trim();
+            newXe.maxe = txt_1.Text.Trim();
             newXe.tenxe = txt_tenxe.Text.Trim();
             newXe.ghichu = txt_ghichu.Text.Trim();
 
@@ -75,7 +75,7 @@ namespace QuanlyNhaMay
             var xe = (from t in db.tXe where t.maxe == txt_1.Text select t).SingleOrDefault();
             tXe newXe = db.tXe.FirstOrDefault(c => c.maxe.Contains( txt_1.Text));
 
-            newXe.maxe = txt_maxe.Text.Trim();
+            newXe.maxe = txt_1.Text.Trim();
             newXe.maxe = txt_tenxe.Text.Trim();
             newXe.ghichu = txt_ghichu.Text.Trim();
 
@@ -85,7 +85,7 @@ namespace QuanlyNhaMay
 
         private void btn_luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(txt_maxe.Text != "" )
+            if(txt_1.Text != "" )
             {
                 if(opt == false)
                 {
@@ -108,9 +108,10 @@ namespace QuanlyNhaMay
         private void btn_huy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             opt = false;
-            txt_1.ReadOnly = false;
             btn_xoa.Enabled = false;
-            clear();
+            btn_luu.Enabled = false;
+            tXeBindingSource.DataSource = db.tXe.ToList();
+
         }
 
         private void btn_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

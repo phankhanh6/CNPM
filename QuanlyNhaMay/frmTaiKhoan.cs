@@ -21,7 +21,7 @@ namespace QuanlyNhaMay
 
         private void frmTaiKhoan_Load(object sender, EventArgs e)
         {
-            return 
+            return;
         }
 
         public static bool isActive()
@@ -38,7 +38,7 @@ namespace QuanlyNhaMay
             }
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void btn_dangnhap_Click(object sender, EventArgs e)
         {
             if(txt_tk.Text == string.Empty)
             {
@@ -54,7 +54,9 @@ namespace QuanlyNhaMay
             {
                 isDone = true;
                 frmMain main = new frmMain();
-                main.Show();
+                main.ShowDialog();
+                Close();
+
             }
             else isDone = false;
             if (!isDone)
@@ -74,6 +76,11 @@ namespace QuanlyNhaMay
         private void frmTaiKhoan_FormClosing(object sender, FormClosingEventArgs e)
         {
             Close();
+        }
+
+        private void txt_tk_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
