@@ -50,7 +50,7 @@ namespace QuanlyNhaMay
                 txt_mk.Select();
                 return;
             }
-            if (txt_tk.Text != string.Empty && txt_tk.Text == "khanhminh" && txt_mk.Text != string.Empty && txt_mk.Text == "123")
+            if (txt_tk.Text != string.Empty && txt_tk.Text == "khanhminh" && txt_mk.Text != string.Empty && txt_mk.Text == "123456")
             {
                 isDone = true;
                 frmMain main = new frmMain();
@@ -73,10 +73,12 @@ namespace QuanlyNhaMay
             Close();
         }
 
-        private void frmTaiKhoan_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmTaiKhoan_FormClosing(object sender, FormClosingEventArgs e)
         {
             Close();
         }
+
+       
 
         private void txt_tk_EditValueChanged(object sender, EventArgs e)
         {

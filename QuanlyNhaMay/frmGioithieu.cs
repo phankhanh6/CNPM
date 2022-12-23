@@ -27,5 +27,16 @@ namespace QuanlyNhaMay
         {
 
         }
+
+        private void imageSlider1_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void btn_Thongtin_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://open24.vn/gioi-thieu");
+
+        }
     }
 }

@@ -79,6 +79,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContact.Designer.cs">
+      <DependentUpon>frmContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDirection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDirection.Designer.cs">
+      <DependentUpon>frmDirection.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +220,12 @@
       <DependentUpon>PhanXuong.tt</DependentUpon>
     </Compile>
     <Compile Include="Xe.cs" />
+    <EmbeddedResource Include="frmContact.resx">
+      <DependentUpon>frmContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDirection.resx">
+      <DependentUpon>frmDirection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,6 +319,23 @@
       <DependentUpon>PhanXuong.edmx</DependentUpon>
       <LastGenOutput>PhanXuong.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\facebook.png" />
+    <None Include="Resources\zalo2.png" />
+    <None Include="Resources\zalo1.png" />
+    <None Include="Resources\zalo.png" />
+    <None Include="Resources\receiver.png" />
+    <None Include="Resources\system-update1.png" />
+    <None Include="Resources\options.png" />
+    <None Include="Resources\system-update.png" />
+    <None Include="Resources\id-card.png" />
+    <None Include="Resources\giới thiệu.png" />
+    <None Include="Resources\contact-mail.png" />
+    <None Include="Resources\direction.png" />
+    <None Include="Resources\thanh phan.png" />
+    <None Include="Resources\phân công.png" />
+    <None Include="Resources\phụ kiện.png" />
+    <None Include="Resources\nuoc.png" />
+    <None Include="Resources\tho.png" />
     <None Include="Resources\Khanhminh.png" />
     <None Include="Resources\1.png" />
     <None Include="Resources\2.png" />

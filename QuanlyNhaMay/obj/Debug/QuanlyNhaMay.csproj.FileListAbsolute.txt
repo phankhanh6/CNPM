@@ -309,3 +309,5 @@ D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\QuanlyNhaMay\obj\Debug\QuanlyNhaMa
 D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\QuanlyNhaMay\obj\Debug\QuanlyNhaMay.frm_dsPhukien.resources
 D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\QuanlyNhaMay\obj\Debug\QuanlyNhaMay.rp_HoaDon.resources
 D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\QuanlyNhaMay\obj\Debug\QuanlyNhaMay.rp_PhuKien.resources
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\QuanlyNhaMay\obj\Debug\QuanlyNhaMay.frm_Contact.resources
+D:\nam3\Cong_nghe_phan_mem\thuc_hanh\QuanLyPX\QuanlyNhaMay\obj\Debug\QuanlyNhaMay.frm_Direction.resources

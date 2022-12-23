@@ -117,7 +117,7 @@ namespace QuanlyNhaMay
             this.IconOptions.Image = global::QuanlyNhaMay.Properties.Resources.sports_car;
             this.Name = "frmTaiKhoan";
             this.Text = "Tài Khoản";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmTaiKhoan_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmTaiKhoan_FormClosing);
             this.Load += new System.EventHandler(this.frmTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_tk.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_mk.Properties)).EndInit();

@@ -116,5 +116,19 @@ namespace QuanlyNhaMay
             ds.MdiParent = this;
             ds.Show();
         }
+
+        private void btn_helpchucnang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_Direction dt = new frm_Direction();
+            dt.MdiParent = this;
+            dt.Show();
+        }
+
+        private void btn_Contact_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_Contact ct = new frm_Contact();
+            ct.MdiParent = this;
+            ct.Show();
+        }
     }
 }

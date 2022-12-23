@@ -121,8 +121,8 @@ namespace QuanlyNhaMay
 
         private void gridControl1_Click(object sender, EventArgs e)
         {
-            txt_maphukien.ReadOnly = true;
             btn_xoa.Enabled = true;
+            btn_luu.Enabled = true;
             opt = true;
         }
     }

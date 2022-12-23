@@ -88,7 +88,7 @@ namespace QuanlyNhaMay
             this.btn_Contact});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl1.MaxItemId = 19;
+            this.ribbonControl1.MaxItemId = 20;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbon_Hethong,
@@ -107,77 +107,99 @@ namespace QuanlyNhaMay
             // 
             this.btn_gioithieu.Caption = "Giới thiệu\r\n";
             this.btn_gioithieu.Id = 2;
+            this.btn_gioithieu.ImageOptions.Image = global::QuanlyNhaMay.Properties.Resources.giới_thiệu;
             this.btn_gioithieu.Name = "btn_gioithieu";
+            this.btn_gioithieu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btn_gioithieu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_trangchu_ItemClick);
             // 
             // btn_Taikhoan
             // 
             this.btn_Taikhoan.Caption = "Tài khoản";
             this.btn_Taikhoan.Id = 3;
+            this.btn_Taikhoan.ImageOptions.Image = global::QuanlyNhaMay.Properties.Resources.id_card;
             this.btn_Taikhoan.Name = "btn_Taikhoan";
+            this.btn_Taikhoan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btn_Taikhoan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Taikhoan_ItemClick);
             // 
             // btn_Xe
             // 
             this.btn_Xe.Caption = "Xe";
             this.btn_Xe.Id = 4;
+            this.btn_Xe.ImageOptions.Image = global::QuanlyNhaMay.Properties.Resources.sports_car;
             this.btn_Xe.Name = "btn_Xe";
+            this.btn_Xe.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btn_Xe.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Xe_ItemClick);
             // 
             // btn_Tho
             // 
             this.btn_Tho.Caption = "Thợ";
             this.btn_Tho.Id = 5;
+            this.btn_Tho.ImageOptions.Image = global::QuanlyNhaMay.Properties.Resources.tho;
             this.btn_Tho.Name = "btn_Tho";
+            this.btn_Tho.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btn_Tho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Tho_ItemClick);
             // 
             // btn_NuocSX
             // 
             this.btn_NuocSX.Caption = "Nước sản xuất";
             this.btn_NuocSX.Id = 6;
+            this.btn_NuocSX.ImageOptions.Image = global::QuanlyNhaMay.Properties.Resources.nuoc;
             this.btn_NuocSX.Name = "btn_NuocSX";
+            this.btn_NuocSX.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btn_NuocSX.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NuocSX_ItemClick);
             // 
             // btn_Phukien
             // 
             this.btn_Phukien.Caption = "Phụ kiện";
             this.btn_Phukien.Id = 7;
+            this.btn_Phukien.ImageOptions.Image = global::QuanlyNhaMay.Properties.Resources.phụ_kiện;
             this.btn_Phukien.Name = "btn_Phukien";
+            this.btn_Phukien.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btn_Phukien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Phukien_ItemClick);
             // 
             // btn_Phancong
             // 
             this.btn_Phancong.Caption = "Phân công";
             this.btn_Phancong.Id = 8;
+            this.btn_Phancong.ImageOptions.Image = global::QuanlyNhaMay.Properties.Resources.phân_công;
             this.btn_Phancong.Name = "btn_Phancong";
+            this.btn_Phancong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btn_Phancong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Phancong_ItemClick);
             // 
             // btn_Thanhphan
             // 
             this.btn_Thanhphan.Caption = "Thành phần";
             this.btn_Thanhphan.Id = 9;
+            this.btn_Thanhphan.ImageOptions.Image = global::QuanlyNhaMay.Properties.Resources.thanh_phan;
             this.btn_Thanhphan.Name = "btn_Thanhphan";
+            this.btn_Thanhphan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btn_Thanhphan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Thanhphan_ItemClick);
             // 
             // btn_DSXe
             // 
             this.btn_DSXe.Caption = "Danh sách xe";
             this.btn_DSXe.Id = 10;
+            this.btn_DSXe.ImageOptions.Image = global::QuanlyNhaMay.Properties.Resources.sports_car;
             this.btn_DSXe.Name = "btn_DSXe";
+            this.btn_DSXe.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btn_DSXe.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_DSXe_ItemClick);
             // 
             // btn_hoadon
             // 
             this.btn_hoadon.Caption = "In hóa đơn";
             this.btn_hoadon.Id = 11;
+            this.btn_hoadon.ImageOptions.Image = global::QuanlyNhaMay.Properties.Resources.phân_công;
             this.btn_hoadon.Name = "btn_hoadon";
+            this.btn_hoadon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btn_hoadon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_hoadon_ItemClick);
             // 
             // btn_DSPhukien
             // 
             this.btn_DSPhukien.Caption = "Danh sách phụ kiện";
             this.btn_DSPhukien.Id = 12;
+            this.btn_DSPhukien.ImageOptions.Image = global::QuanlyNhaMay.Properties.Resources.phụ_kiện;
             this.btn_DSPhukien.Name = "btn_DSPhukien";
+            this.btn_DSPhukien.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btn_DSPhukien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_DSPhukien_ItemClick);
             // 
             // btn_LocXe
@@ -202,7 +224,10 @@ namespace QuanlyNhaMay
             // 
             this.btn_helpchucnang.Caption = "Hướng dẫn chức năng";
             this.btn_helpchucnang.Id = 16;
+            this.btn_helpchucnang.ImageOptions.Image = global::QuanlyNhaMay.Properties.Resources.direction;
             this.btn_helpchucnang.Name = "btn_helpchucnang";
+            this.btn_helpchucnang.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_helpchucnang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_helpchucnang_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -214,19 +239,25 @@ namespace QuanlyNhaMay
             // 
             this.btn_Contact.Caption = "Liên hệ";
             this.btn_Contact.Id = 18;
+            this.btn_Contact.ImageOptions.Image = global::QuanlyNhaMay.Properties.Resources.contact_mail;
             this.btn_Contact.Name = "btn_Contact";
+            this.btn_Contact.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_Contact.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Contact_ItemClick);
             // 
             // ribbon_Hethong
             // 
             this.ribbon_Hethong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1});
+            this.ribbon_Hethong.ImageOptions.Alignment = DevExpress.Utils.HorzAlignment.Center;
             this.ribbon_Hethong.Name = "ribbon_Hethong";
             this.ribbon_Hethong.Text = "Hệ thống";
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup1.ItemLinks.Add(this.btn_gioithieu);
             this.ribbonPageGroup1.ItemLinks.Add(this.btn_Taikhoan);
+            this.ribbonPageGroup1.ItemsLayout = DevExpress.XtraBars.Ribbon.RibbonPageGroupItemsLayout.OneRow;
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbon_Danhmuc
@@ -244,6 +275,7 @@ namespace QuanlyNhaMay
             this.ribbonPageGroup2.ItemLinks.Add(this.btn_Phukien);
             this.ribbonPageGroup2.ItemLinks.Add(this.btn_Phancong);
             this.ribbonPageGroup2.ItemLinks.Add(this.btn_Thanhphan);
+            this.ribbonPageGroup2.ItemsLayout = DevExpress.XtraBars.Ribbon.RibbonPageGroupItemsLayout.OneRow;
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // ribbon_InAn
@@ -258,6 +290,7 @@ namespace QuanlyNhaMay
             this.ribbonPageGroup3.ItemLinks.Add(this.btn_DSXe);
             this.ribbonPageGroup3.ItemLinks.Add(this.btn_DSPhukien);
             this.ribbonPageGroup3.ItemLinks.Add(this.btn_hoadon);
+            this.ribbonPageGroup3.ItemsLayout = DevExpress.XtraBars.Ribbon.RibbonPageGroupItemsLayout.OneRow;
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
             // ribbon_Help
@@ -271,6 +304,7 @@ namespace QuanlyNhaMay
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.btn_helpchucnang);
             this.ribbonPageGroup5.ItemLinks.Add(this.btn_Contact);
+            this.ribbonPageGroup5.ItemsLayout = DevExpress.XtraBars.Ribbon.RibbonPageGroupItemsLayout.OneRow;
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
             // xtraTabbedMdiManager1

@@ -34,15 +34,19 @@ namespace QuanlyNhaMay
             this.imageSlider1 = new DevExpress.XtraEditors.Controls.ImageSlider();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btn_Thongtin = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageSlider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
             // 
+            this.dataLayoutControl1.Controls.Add(this.btn_Thongtin);
             this.dataLayoutControl1.Controls.Add(this.imageSlider1);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -62,10 +66,11 @@ namespace QuanlyNhaMay
             this.imageSlider1.Images.Add(((System.Drawing.Image)(resources.GetObject("imageSlider1.Images4"))));
             this.imageSlider1.Location = new System.Drawing.Point(12, 12);
             this.imageSlider1.Name = "imageSlider1";
-            this.imageSlider1.Size = new System.Drawing.Size(1241, 562);
+            this.imageSlider1.Size = new System.Drawing.Size(1241, 531);
             this.imageSlider1.StyleController = this.dataLayoutControl1;
             this.imageSlider1.TabIndex = 4;
             this.imageSlider1.Text = "imageSlider1";
+            this.imageSlider1.Click += new System.EventHandler(this.imageSlider1_Click);
             // 
             // Root
             // 
@@ -73,7 +78,8 @@ namespace QuanlyNhaMay
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItem2});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(1265, 586);
             this.Root.TextVisible = false;
@@ -83,9 +89,28 @@ namespace QuanlyNhaMay
             this.layoutControlItem1.Control = this.imageSlider1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1245, 566);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1245, 535);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // btn_Thongtin
+            // 
+            this.btn_Thongtin.Location = new System.Drawing.Point(12, 547);
+            this.btn_Thongtin.Name = "btn_Thongtin";
+            this.btn_Thongtin.Size = new System.Drawing.Size(1241, 27);
+            this.btn_Thongtin.StyleController = this.dataLayoutControl1;
+            this.btn_Thongtin.TabIndex = 5;
+            this.btn_Thongtin.Text = "Thông tin Phân Xưởng";
+            this.btn_Thongtin.Click += new System.EventHandler(this.btn_Thongtin_Click);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.btn_Thongtin;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 535);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(1245, 31);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
             // 
             // frmGioithieu
             // 
@@ -102,6 +127,7 @@ namespace QuanlyNhaMay
             ((System.ComponentModel.ISupportInitialize)(this.imageSlider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -112,5 +138,7 @@ namespace QuanlyNhaMay
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraEditors.Controls.ImageSlider imageSlider1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraEditors.SimpleButton btn_Thongtin;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

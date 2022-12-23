@@ -27,7 +27,11 @@ namespace QuanlyNhaMay
             txt_ghichu.Text = "";
             txt_tenxe.Text = "";
         }
-
+        public void clearID()
+        {
+            txt1.Text = "";
+            txt_1.Text = "";
+        }
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
@@ -47,8 +51,7 @@ namespace QuanlyNhaMay
             btn_xoa.Enabled = false;
             btn_luu.Enabled = false;
             tXeBindingSource.DataSource = db.tXe.ToList();
-            txt1.Text = txt_ghichu.Text = txt_1.Text = txt_tenxe.Text = "";
-
+            clear();
         }
 
         private void btn__them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -61,20 +64,20 @@ namespace QuanlyNhaMay
         public void Add()
         {
             var newXe = new tXe();
-            newXe.maxe = txt_1.Text.Trim();
-            newXe.tenxe = txt_tenxe.Text.Trim();
-            newXe.ghichu = txt_ghichu.Text.Trim();
+            
+                newXe.maxe = txt_1.Text.Trim();
+                newXe.tenxe = txt_tenxe.Text.Trim();
+                newXe.ghichu = txt_ghichu.Text.Trim();
 
+                db.tXe.Add(newXe);
+                db.SaveChanges();
 
-            db.tXe.Add(newXe);
-            db.SaveChanges();
 
         }
         public void Update()
         {
             var xe = (from t in db.tXe where t.maxe == txt_1.Text select t).SingleOrDefault();
             tXe newXe = db.tXe.FirstOrDefault(c => c.maxe.Contains( txt_1.Text));
-
             newXe.maxe = txt_1.Text.Trim();
             newXe.maxe = txt_tenxe.Text.Trim();
             newXe.ghichu = txt_ghichu.Text.Trim();
@@ -85,24 +88,38 @@ namespace QuanlyNhaMay
 
         private void btn_luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(txt_1.Text != "" )
+            if (txt_1.Text == "" && txt1.Text == "")
             {
-                if(opt == false)
-                {
-                    Add();
-                }
-                else
-                {
-                    Update();
-                }
+                XtraMessageBox.Show("Mã xe không được để trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (txt1.Text.Length > 4)
+            {
+                XtraMessageBox.Show("Mã xe không chứa quá 4 kí tự!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                clearID();
+
+            }
+            else 
+            //if (txt_1.Text != ""  && txt1.Text.Length < 4)
+            {
+                
+
+                    if (opt == false)
+                    {
+                        Add();
+
+                    }
+                    else
+                    {
+                        Update();
+                    }
+                //db.SaveChanges();
 
                 getdata();
-                XtraMessageBox.Show("Dữ liệu đã được lưu!","Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    XtraMessageBox.Show("Dữ liệu đã được lưu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
             }
-            else
-            {
-                XtraMessageBox.Show("Mã xe không được để trống!","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+
         }
 
         private void btn_huy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -131,11 +148,11 @@ namespace QuanlyNhaMay
                 }
             }
         }
-
+       
         private void gridControl1_Click(object sender, EventArgs e)
         {
-            txt_1.ReadOnly = true;
             btn_xoa.Enabled = true;
+            btn_luu.Enabled = true;
             opt = true;
         }
     }

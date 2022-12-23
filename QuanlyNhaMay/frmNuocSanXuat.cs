@@ -114,8 +114,8 @@ namespace QuanlyNhaMay
 
         private void gridControl1_Click(object sender, EventArgs e)
         {
-                txt_manuoc.ReadOnly = true;
                 btn_xoa.Enabled = true;
+                btn_luu.Enabled = true;
                 opt = true;
         }
     }
